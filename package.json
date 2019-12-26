@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "rm -rf dist && parcel build src/index.html",
+    "build": "rm -rf dist && parcel build src/index.html && npm run _notify",
+    "_notify": "echo This branch is used only as github pages deployment target > dist/README.md" ,
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist -b master"
   },
