@@ -1,1 +1,1 @@
-This branch is used only as github pages deployment target 
+This branch is used only as github pages deployment target
