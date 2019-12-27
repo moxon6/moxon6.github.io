@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import './App.scss';
 import { getProjects } from './api/github';
-import background from './background.png';
 import background2 from './background2.jpg';
 
 
