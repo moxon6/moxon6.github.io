@@ -17,6 +17,7 @@ export function processData(data) {
         .items
         .map(x => ({
             homepage: x.homepage,
-            repo: x.html_url
+            repo: x.html_url,
+            description: x.description
         }))
 }
