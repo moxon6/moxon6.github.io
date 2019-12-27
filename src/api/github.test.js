@@ -14,7 +14,7 @@ describe('github api', () => {
         expect(processData(githubReposMock)).toEqual([
             {
                 "name": "python-bot-workshop",
-                "description": "Tool to write a bot in python in a browser based environment",
+                "description": "Python Bot Workshop : Tool to write a bot in python in a browser based environment",
                 "homepage": "https://moxon6.github.io/python-bot-workshop/",
                 "repo": "https://github.com/moxon6/python-bot-workshop",
                 "icon": "https://raw.githubusercontent.com/moxon6/python-bot-workshop/gh-pages/assets/icon.png",

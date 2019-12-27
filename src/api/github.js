@@ -23,7 +23,8 @@ export function processData(data) {
             name: x.name,
             homepage: x.homepage,
             repo: x.html_url,
-            description: x.description,
+            description: x.description.split(":")[1],
+            title: x.description.split(":")[0],
             icon: repoUrlToIconUrl(x.html_url, x.default_branch)
         }))
 }

@@ -1,3 +1,58 @@
+@import "colors.scss";
+
+$corner-size: 90px;
+$corner-color: black;
+$gridSize: 1000px;
+$spacing: 10px;
+
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: $background-color;
+}
+
+.project-grid {
+  display: grid;
+  width: $gridSize;
+  grid-template-columns: 33% 33% 33%;
+  overflow: hidden;
+}
+
+.project {
+  position: relative;
+  width: auto;
+  height: 300px;
+  margin: $spacing;
+  background-color: $primary-color;
+  > .icon {
+    width: auto;
+    height: $corner-size;
+  }
+  border: none;
+}
+
+.corner-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  .corner {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 $corner-size $corner-size 0;
+    border-color: transparent $corner-color transparent transparent;
+  }
+
+  .octocat {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: #{$corner-size * 0.5 - 10px};
+    height: auto; 
+  }
+}
+
+.project-title {
+  color: $secondary-color;
 }
