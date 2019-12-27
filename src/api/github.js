@@ -1,4 +1,4 @@
-
+import mockData from './github.repos.mock';
 
 const topic = "moxon6-gh-pages"
 const user = "moxon6"
@@ -27,3 +27,7 @@ export function processData(data) {
             icon: repoUrlToIconUrl(x.html_url, x.default_branch)
         }))
 }
+
+// Use mock data for now to avoid hitting rate limit
+// Setup local storage caching after
+export const getProjects = () => Promise.resolve(processData(mockData))
