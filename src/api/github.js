@@ -20,6 +20,7 @@ export function processData(data) {
     return data
         .items
         .map(x => ({
+            name: x.name,
             homepage: x.homepage,
             repo: x.html_url,
             description: x.description,
