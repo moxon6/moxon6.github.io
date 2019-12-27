@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import './App.scss';
 import { getProjects } from './api/github';
 import background2 from './background2.jpg';
+import Panel from './components/Panel';
 
 
 document.addEventListener('keyup', (e) => {
@@ -30,32 +31,27 @@ export default function App() {
       }}
     >
       <div className="projects">
-        <div className="project-list">
-          <div className="projects-title">
-            Projects
-          </div>
-          <div className="project-entry-list">
-            {
-              projects.map((project, index) => (
-                <div 
-                  className={`project-entry-container ${project.selected ? "selected" : ''}`}
-                  onClick={() => setSelected(index)}
-                >
-                  <div className="line-number">
-                    {project.selected ? "> " : ""}
-                    {index + 1}
-                  </div>
-                  <div className="project-entry">
-                    {project.title}
-                  </div >
+        <Panel className="" title="Projects">
+          {
+            projects.map((project, index) => (
+              <div
+                className={`project-entry-container ${project.selected ? "selected" : ''}`}
+                onClick={() => setSelected(index)}
+              >
+                <div className="line-number">
+                  {project.selected ? "> " : ""}
+                  {index + 1}
                 </div>
-              ))
-            }
-          </div>
-        </div>
-        <div className="project-details">
+                <div className="project-entry">
+                  {project.title}
+                </div >
+              </div>
+            ))
+          }
+        </Panel>
+        <Panel title="Preview Panel">
 
-        </div>
+        </Panel>
       </div>
     </div>
   );

@@ -11,6 +11,7 @@ $color2: #20262c;
 $color-light: rgb(129, 129, 129);
 $color3: #65d8d7;
 
+
 .App {
   height: 100%;
   background-color: $background-color;
@@ -24,24 +25,9 @@ $color3: #65d8d7;
   padding-top: 50px;
   padding-bottom: 100px;
 
-  .project-list {
-    flex: 3;
-    background-color: $color1;
-    border-radius: $border-radius;
-    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.75);
-  }
 
-  .projects-title {
-    height: 50px;
-    background-color: $color2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $color-light;
-    font-family: monospace;
-    font-size: x-large;
-    border-radius: $border-radius $border-radius 0px 0px;
-  }
+
+
 
   .project-details {
     flex: 2;
