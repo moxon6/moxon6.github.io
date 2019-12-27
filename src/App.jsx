@@ -7,9 +7,7 @@ export default function App() {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    getProjects().then(projects => {
-      setProjects(projects)
-    })     
+    getProjects().then(setProjects)     
   }, [])
 
   return (
