@@ -18,7 +18,7 @@ export default function App() {
   window.decrement = useCallback(() => setSelected((selected + _projects.length - 1) % _projects.length), [_projects.length, selected])
 
   useEffect(() => {
-    getProjects().then(setProjects)
+    getProjects().then(projects => setProjects([...projects, ...projects, ...projects, ...projects]))
   }, [])
 
   const projects = _projects.map((project, i) => (i === selected ? { ...project, selected: true } : project))
@@ -37,13 +37,15 @@ export default function App() {
         </div>
         <div className="details-panel-container">
 
-          <Panel title="Details Panel">
-
+          <Panel title="Details">
+            <div className="detail-panel-image">
+              <img src={(projects[selected] || {}).icon} alt=""/>
+            </div>
           </Panel>
         </div>
         <div className="preview-panel-container">
 
-          <Panel title="Preview Panel">
+          <Panel title="Preview">
 
           </Panel>
         </div>

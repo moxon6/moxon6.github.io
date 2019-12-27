@@ -6,10 +6,10 @@ $gridSize: 1600px;
 $spacing: 10px;
 $border-radius: 16px;
 
-$color1: #282f37;
-$color2: #20262c;
-$color-light: rgb(129, 129, 129);
-$color3: #65d8d7;
+$color1: #242b33;
+$color2: #122333;
+$color-light: rgb(182, 182, 182);
+$color3: #47cee6;
 
 
 .App {
@@ -20,7 +20,9 @@ $color3: #65d8d7;
 }
 
 .projects {
-  width: $gridSize;
+  width: #{$gridSize - 20px};
+  margin-left: 10px;
+  margin-right: 10px;
   padding-top: 50px;
   padding-bottom: 100px;
   display: grid;

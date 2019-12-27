@@ -133,7 +133,7 @@
         "site_admin": false
       },
       "html_url": "https://github.com/moxon6/Rocket.Chat-App-Starter",
-      "description": "Rocket Chat App Starter + vscode devContainer environment",
+      "description": "Rocket Chat App Starter: Rocket Chat App Starter + vscode devContainer environment",
       "fork": false,
       "url": "https://api.github.com/repos/moxon6/Rocket.Chat-App-Starter",
       "forks_url": "https://api.github.com/repos/moxon6/Rocket.Chat-App-Starter/forks",
@@ -236,7 +236,7 @@
         "site_admin": false
       },
       "html_url": "https://github.com/moxon6/hugo-blog-starter",
-      "description": "Template project with base Hugo setup using VSCode Docker remote",
+      "description": "Hugo Blog Starter : Template project with base Hugo setup using VSCode Docker remote",
       "fork": false,
       "url": "https://api.github.com/repos/moxon6/hugo-blog-starter",
       "forks_url": "https://api.github.com/repos/moxon6/hugo-blog-starter/forks",
