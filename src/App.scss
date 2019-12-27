@@ -20,8 +20,26 @@ $color3: #65d8d7;
 }
 
 .projects {
-  display: flex;
   width: $gridSize;
   padding-top: 50px;
   padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+
+  .projects-panel-container {
+    grid-area: 1 / 1 / 6 / 4;
+  }
+
+  .details-panel-container {
+    grid-area: 1 / 4 / 3 / 6;
+  }
+
+  .preview-panel-container {
+    grid-area: 3 / 4 / 6 / 6;
+  }
+
 }
+

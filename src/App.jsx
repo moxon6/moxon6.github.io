@@ -26,16 +26,28 @@ export default function App() {
   return (
     <div className="App" style={{ background: `url(${background2})` }}>
       <div className="projects">
-        <Panel className="" title="Projects">
-          {
-            projects.map((project, index) => (
-              <ProjectEntry project={project} index={index} setSelected={setSelected} />
-            ))
-          }
-        </Panel>
-        <Panel title="Preview Panel">
+        <div className="projects-panel-container">
+          <Panel title="Projects">
+            {
+              projects.map((project, index) => (
+                <ProjectEntry project={project} index={index} setSelected={setSelected} />
+              ))
+            }
+          </Panel>
+        </div>
+        <div className="details-panel-container">
 
-        </Panel>
+          <Panel title="Details Panel">
+
+          </Panel>
+        </div>
+        <div className="preview-panel-container">
+
+          <Panel title="Preview Panel">
+
+          </Panel>
+        </div>
+
       </div>
     </div>
   );
