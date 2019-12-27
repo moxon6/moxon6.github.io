@@ -1,4 +1,5 @@
 import React from 'react';
+import './ProjectEntry.scss';
 
 export default ({ project, index, setSelected }) => (
     <div
