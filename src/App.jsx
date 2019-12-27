@@ -3,7 +3,7 @@ import './App.scss';
 import { getProjects } from './api/github';
 import background2 from './background2.jpg';
 import Panel from './components/Panel';
-
+import ProjectEntry from './components/ProjectEntry';
 
 document.addEventListener('keyup', (e) => {
   if (e.code === "ArrowUp") window.decrement()
@@ -24,28 +24,12 @@ export default function App() {
   const projects = _projects.map((project, i) => (i === selected ? { ...project, selected: true } : project))
 
   return (
-    <div className="App"
-      style={{ background: `url(${background2})` }}
-      onKeyUp={e => {
-
-      }}
-    >
+    <div className="App" style={{ background: `url(${background2})` }}>
       <div className="projects">
         <Panel className="" title="Projects">
           {
             projects.map((project, index) => (
-              <div
-                className={`project-entry-container ${project.selected ? "selected" : ''}`}
-                onClick={() => setSelected(index)}
-              >
-                <div className="line-number">
-                  {project.selected ? "> " : ""}
-                  {index + 1}
-                </div>
-                <div className="project-entry">
-                  {project.title}
-                </div >
-              </div>
+              <ProjectEntry project={project} index={index} setSelected={setSelected} />
             ))
           }
         </Panel>
