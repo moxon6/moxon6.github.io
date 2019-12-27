@@ -2,57 +2,76 @@
 
 $corner-size: 90px;
 $corner-color: black;
-$gridSize: 1000px;
+$gridSize: 1600px;
 $spacing: 10px;
+$border-radius: 16px;
+
+$color1: #282f37;
+$color2: #20262c;
+$color-light: rgb(129, 129, 129);
+$color3: #65d8d7;
 
 .App {
-  display: flex;
-  justify-content: center;
   height: 100%;
   background-color: $background-color;
+  display: flex;
+  justify-content: center;
 }
 
-.project-grid {
-  display: grid;
+.projects {
+  display: flex;
   width: $gridSize;
-  grid-template-columns: 33% 33% 33%;
-  overflow: hidden;
-}
+  padding-top: 50px;
+  padding-bottom: 100px;
 
-.project {
-  position: relative;
-  width: auto;
-  height: 300px;
-  margin: $spacing;
-  background-color: $primary-color;
-  > .icon {
-    width: auto;
-    height: $corner-size;
-  }
-  border: none;
-}
-
-.corner-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  .corner {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 $corner-size $corner-size 0;
-    border-color: transparent $corner-color transparent transparent;
+  .project-list {
+    flex: 3;
+    background-color: $color1;
+    border-radius: $border-radius;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.75);
   }
 
-  .octocat {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: #{$corner-size * 0.5 - 10px};
-    height: auto; 
+  .projects-title {
+    height: 50px;
+    background-color: $color2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-light;
+    font-family: monospace;
+    font-size: x-large;
+    border-radius: $border-radius $border-radius 0px 0px;
   }
-}
 
-.project-title {
-  color: $secondary-color;
+  .project-details {
+    flex: 2;
+  }
+
+  .project-entry-container {
+    display: flex;
+    font-size: 20px;
+    font-family: monospace;
+    color: $color-light;
+    cursor: pointer;
+
+    &.selected {
+      color: $color3;
+      background-color: $color2;
+    }
+
+    .line-number {
+      width: 40px;
+      text-align: right;
+    }
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .project-entry-list {
+    padding-top: 20px;
+  }
+
+  .project-entry {
+    padding-left: 10px;
+  }
 }
