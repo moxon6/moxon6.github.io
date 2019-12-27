@@ -12,12 +12,17 @@ export const fetchData = async () => await fetch(url, {
     }
 }).json()
 
+export const repoUrlToIconUrl = (repoUrl, defaultBranch) => 
+    `${repoUrl.replace("github.com", "raw.githubusercontent.com")}/${defaultBranch}/assets/icon.png`
+
+
 export function processData(data) {
     return data
         .items
         .map(x => ({
             homepage: x.homepage,
             repo: x.html_url,
-            description: x.description
+            description: x.description,
+            icon: repoUrlToIconUrl(x.html_url, x.default_branch)
         }))
 }
